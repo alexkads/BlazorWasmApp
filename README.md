@@ -1,0 +1,2 @@
+# BlazorWasmApp
+Projeto de treinamento
