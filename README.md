@@ -1,7 +1,4 @@
-# BlazorWasmApp
-Projeto de treinamento
-
-# Primeiros passos para instalação do projeto G-SYS
+# Primeiros passos para utilização do treinamento
 
 Primeiramente devemos criar o ambiente de desenvimento instalando as seguintes aplicações:
 
