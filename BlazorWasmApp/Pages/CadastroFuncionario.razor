@@ -1,0 +1,60 @@
+﻿@page "/cadastrofuncionarios"
+
+<div class="card">
+    <div class="card-header">
+        Ficha de Cadastro
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Cadastro de Funcionário</h5>
+        <p class="card-text">Cadastro funcional de Exemplo com Card</p>
+        <EditForm Model="@cadFuncionario">
+
+            <div class="d-grid gap-3 border p-3 bg-light">
+                <BSInputText class="col-md-12"
+                             textField="Nome completo"
+                             @bind-Value="cadFuncionario.nomeCompleto" />
+
+                <div class="row g-2">
+                    <BSInputText class="col-md-8"
+                                 textField="Endereço"
+                                 @bind-Value="cadFuncionario.endereco" />
+
+                    <BSInputText class="col-md-4"
+                                 textField="Bairro"
+                                 @bind-Value="cadFuncionario.bairro" />
+                </div>
+                <div class="row g-2">
+                    <BSInputText class="col-md-4"
+                                 textField="Município"
+                                 @bind-Value="cadFuncionario.municipio" />
+
+                    <BSInputText class="col-md-4"
+                                 textField="Estado"
+                                 @bind-Value="cadFuncionario.estado" />
+
+                    <BSInputText class="col-md-4"
+                                 textField="Telefone"
+                                 @bind-Value="cadFuncionario.telefone" />
+                </div>
+            </div>
+        </EditForm>
+        <br />
+        <a href="#" class="btn btn-primary">Gravar</a>
+    </div>
+</div>
+
+@code {
+    //Modelagem
+    class CadFuncionario
+    {
+        public string nomeCompleto { get; set; }
+        public string endereco { get; set; }
+        public string bairro { get; set; }
+        public string municipio { get; set; }
+        public string estado { get; set; }
+        public string telefone { get; set; }
+    }
+
+    //Instância da Modelagem
+    CadFuncionario cadFuncionario = new CadFuncionario();
+}

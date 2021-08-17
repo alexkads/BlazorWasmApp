@@ -1,0 +1,18 @@
+﻿@namespace BlazorWasmApp.Components
+@inherits InputText
+
+<div class="@CssClass form-floating">
+    <input @attributes="AdditionalAttributes"
+           class="form-control"
+           value="@CurrentValue"
+           @oninput="EventCallback.Factory.CreateBinder<string>(
+         this, __value => CurrentValueAsString = __value,
+         CurrentValueAsString)"
+           placeholder="@textField" />
+    <label form="@textField">@textField</label>
+</div>
+
+@code {
+    [Parameter]
+    public string textField { get; set; }
+}
